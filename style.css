@@ -108,7 +108,7 @@ list-style: none;
   color: #636270;
 }
 .hero-section{
-  height: calc(100dvh-240px);
+  height: calc(100dvh - 204px);
   min-height: 600px;
   width: 100%;
   position: relative;
@@ -118,16 +118,17 @@ list-style: none;
   position: absolute;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
   display: flex;
-  justify-content: center;
+  padding: 0 60px;
   align-items: center;
   color: black;
   font-size: 24px;
   text-align: center;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  z-index: -2;
+  overflow: hidden;
+  border-radius: 0 0 48px 48px;
 }
 
 .slider.active {
@@ -136,19 +137,190 @@ list-style: none;
 
 .slider h5 {
   font-size: 36px;
-  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 12%;
+  line-height: 100%;
+  color: #272343;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0;
 }
 
 .slider p {
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 110%;
+  color: #272343;
+  text-transform: capitalize;
+  text-align: left;
+  width: 500px;
+  margin: 0;
+  padding: 0px;
+  padding-bottom: 24px;
 }
 .circle{
-  width: 747px;
-  height: 747px;
+  width: 590px;
+  height: 590px;
   position: absolute;
   right: 189px ;
-  top: -194px;
+  top: -154px;
   border-radius: 9999px;
   z-index: -1;
 
 }
+.hero-img {
+  position: absolute;
+  z-index: -1;
+  
+}
+.hero-img img{
+  object-fit: contain;
+  object-position: right top;
+}
+.dining {
+  top: 280px;
+right: 20px ;
+}
+.sofa {
+  top: 280px;
+right: 120px ;
+}
+.chair {
+  top: 220px;
+right: 120px ;
+}
+.imgdining img {
+  object-fit: contain;
+  width: 800px;
+  height: 600px;
+
+}
+.imgsofa img {
+  object-fit: contain;
+  width: 700px;
+  height: 600px;
+}
+.imgchair img {
+  object-fit: contain;
+  width: 357px;
+  height: 486px;
+}
+.imgdining  {
+  top: 120px;
+  right: 10px ;
+}
+.imgsofa {
+  top: 120px;
+  right: 12px ;
+}
+.imgchair {
+  top: 220px;
+  right: 120px ;
+}
+
+.discount{
+position:absolute;
+height: 100px;
+width: 100px;
+background-color: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-radius: 999px;
+}
+.discount-container{
+  position: relative;
+
+}
+.discount-number{
+  color: #F05C52;
+  line-height: 110%;
+  font-size: 30px;
+  font-weight: bold;
+}
+.discount-word{
+  color: #272343;
+  font-size: 14px;
+  line-height: 110%;
+  letter-spacing: 2%;
+}
+button{
+    background-color: #029FAE;
+    color: white;
+    font-size: 16px;
+    font-weight: 600px;
+    height: 52px;
+    width: 171px;
+    display: flex;
+    outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 17px 24px;
+  border-radius: 8px; 
+  justify-content: space-between;
+}
+button span{
+  width: 24px;
+  height: 24px;
+  right: 24px;
+}
+.feature-container{
+  background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding: 25px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -50px;
+    width: 1000px;
+    margin: auto;
+    justify-content: space-between;
+
+}
+.feature-box{
+display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    
+}
+.feature-box .icon{
+  width: 30px;
+  height: 30px;
+  
+}
+.feature-info {
+  color: #272343;
+  line-height: 110%;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0;
+}
+.info-below {
+  color: #9A9CAA;
+  line-height: 110%;
+  font-size: 13px;
+  margin: 0;
+
+}
+.company-logo{
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+    width: 1000px;
+    padding: 40px;
+    
+}
+
+  
