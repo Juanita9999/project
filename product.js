@@ -43,6 +43,7 @@ function productGrid() {
     
     let productTitle = "product-title"
     let cartClass = "cart-class"
+
     if (product.inCart === true  ){
       cartClass = "cart-full";
       productTitle = "product-full"
@@ -51,11 +52,22 @@ function productGrid() {
       cartClass = "cart-empty" ;
       productTitle = "product-empty" 
     }
+     let newProduct = " "
+     if (product.new === true){
+      newProduct ="new-product"
+     }
+     let saleProduct = " "
+     if (product.sale === true){
+      saleProduct = "sale-product"
+     }
+   
     productItem.innerHTML= `<div>
     <div class="product-chair" > <img src="${product.image}"> 
+    <p class="${newProduct} hidden"> New </p>
+    <p class="${saleProduct} hidden" > Sale   </p>
       <div class="bottom">
         <div>
-          <h4 class="product-name">${product.productname}</h4>
+          <h4 class="product-name ${productTitle}" >${product.productname}</h4>
           <p class="product-price">${product.price}</p>
         </div>
         <div><i class="${cartClass} fa-solid fa-cart-shopping"></i></div>
