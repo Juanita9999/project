@@ -38,10 +38,11 @@ function populateSliders() {
   heroDetails.forEach((hero,index)=>{
     const heroDiv=document.getElementById(`slider${index + 1}`);
     heroDiv.style.backgroundColor=hero.colorBg;
-    heroDiv.innerHTML=`<div>
+    heroDiv.innerHTML=`<div class="hero-div">
     <h5>${hero.title}</h5>
     <p>${hero.text}</p>
     <button>${hero.button} <span><i class="fa-solid fa-arrow-right"></i></span> </button>
+    <div class=' hero-imgPhone'><img src="images/chair.png" alt="${hero.title}"/></div>
     <div class="circle" style="background-color:${hero.circle}">
     <div class=' ${hero.imgclass} hero-img'><img src="${hero.image}" alt="${hero.title}"/></div>
     <div class="discount-container"> 
@@ -69,3 +70,25 @@ function startSlider() {
 }
 populateSliders();
 startSlider();
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const mobileNav = document.querySelector('.mobile-nav');
+
+hamburgerMenu.addEventListener('click', () => {
+  mobileNav.classList.toggle('active');
+});
+
+// JavaScript to trigger animation on scroll
+const testimonials = document.querySelectorAll('.testimonial');
+
+function checkTestimonials() {
+    testimonials.forEach(testimonial => {
+        const rect = testimonial.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            testimonial.classList.add('show');
+        }
+    });
+}
+
+window.addEventListener('scroll', checkTestimonials);
+checkTestimonials();
