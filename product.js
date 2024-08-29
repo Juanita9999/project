@@ -70,7 +70,7 @@ function productGrid() {
           <h4 class="product-name ${productTitle}" >${product.productname}</h4>
           <p class="product-price">${product.price}</p>
         </div>
-        <div><i class="${cartClass} fa-solid fa-cart-shopping"></i></div>
+        <div class="${cartClass}"><i class=" fa-solid fa-cart-shopping"></i></div>
       </div>
       <p></p>
     </div>

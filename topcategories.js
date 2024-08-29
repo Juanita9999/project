@@ -43,7 +43,6 @@ function categorySlider() {
       </div>
       </div>
     </div>`
-
   }
 )
 };
