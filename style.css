@@ -539,11 +539,12 @@ overflow: hidden;
 .ourproduct-top{
   display: flex;
   flex-direction: column;
-justify-content: center;
-align-items: center;
-margin: 0;
-padding-bottom: 35px;
-padding-top: 50px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding-bottom: 35px;
+  padding-top: 50px;
+  gap: 20px;
 
 }
 
@@ -981,11 +982,18 @@ padding-top: 50px;
 /* tablet view (768px till 1024px) */
 @media (min-width: 768px) and (max-width: 1024px){
 
+  slider h5 {
+    padding-top: 70px;
+  }   
+
+  .circle{
+    left: 120px ;
+    top: -130px;
+  }
   .product-list,.product-items{
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
 
-  
   }
   
   .company-logo{
@@ -996,25 +1004,73 @@ padding-top: 50px;
     align-items: center;
     display: flex;
     gap:10px;
-
   }
   .company-logo img{
     width: 10%;
     object-fit: contain;
     object-position: center;
- 
- 
   }
+
   .feature-container{
 
     display: none;
 }
+.testimonial p {
+  font-size: 15px;
+  line-height: 150%;
+  color: #636270;
+  margin-bottom: 20px;
+}
+.profile-left img {
+  width: 100px;
+  height: 100px;
 
 }
+.footer{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  row-gap: 40px;
+  
+}
+.footer-news, .footer-info{
+  grid-column: span 2 / span 2;
+  width:700px;
+}
+}
+
 
 
 /* phone view (up till 768px) */
 @media (max-width: 768px){
+
+  header{
+    display: none;
+  }
+  .hero-section{
+    height: calc(100dvh - 80px);
+    min-height: 500px;
+    max-height: 950px;
+  
+  }
+.slider p {
+  font-size: 20px;
+  width: 300px;
+  padding-bottom: 20px;
+}
+
+.hero-img {
+  position: absolute;
+  z-index: -1;
+  
+}
+.hero-img img{
+  object-fit: contain;
+  object-position: right top;
+}
+.tab-links {
+  width: 300px;
+}
 
   .product-list,.product-items{
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1026,10 +1082,55 @@ padding-top: 50px;
     display: none;
   }
   .feature-container{
-
     display: none;
 }
+.testimonial-container {
+  flex-direction: column;
+  gap: 24px;
+
+}
+.testimonial {
+  width: 100%;
+}
+.testimonial p {
+  font-size: 10px;
+}
+
+.client-info img {
+  width: 20px;
+  height: 20px;
   
+}
+
+.client-info h4 {
+  font-size: 10px;
+}
+.client-info p {
+  font-size: 10px;
+}
+
+.profile-left img {
+  width: 50px;
+  height: 50px;
+  margin-left: 30px;
+ 
+}
+.footer{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  row-gap: 40px;
+  
+}
+.footer-news, .footer-info{
+  grid-column: span 2 / span 2;
+  width:250px;
+}
+.news-buttons{
+  align-items: start;
+  flex-direction: column;
+
+}
 
  
 }
