@@ -84,6 +84,8 @@ padding: 0 60px;
 display: flex;
 flex-direction: row;
 height: 47px;
+align-items: center;
+gap: 20px;
 }
 .categories{
 color: #272343;
